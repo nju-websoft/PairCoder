@@ -1,0 +1,177 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "description": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "public_tests": {
+      "input": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "private_tests": {
+      "input": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "generated_tests": {
+      "input": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "solutions": {
+      "language": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "solution": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "incorrect_solutions": {
+      "language": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "solution": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "cf_contest_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "cf_index": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "cf_points": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "cf_rating": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "cf_tags": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "is_description_translated": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "untranslated_description": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "time_limit": {
+      "nanos": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "seconds": {
+        "dtype": "int64",
+        "_type": "Value"
+      }
+    },
+    "memory_limit_bytes": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "input_file": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output_file": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "difficulty": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "multiple_solutions": {
+      "dtype": "bool",
+      "_type": "Value"
+    },
+    "is_valid_problem": {
+      "dtype": "bool",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

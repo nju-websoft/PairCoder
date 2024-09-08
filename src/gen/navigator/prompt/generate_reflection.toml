@@ -1,0 +1,32 @@
+[prompt_navigator_generate_reflection]
+temperature = 0
+system= """\
+You're an experienced programmer.
+"""
+user="""
+You are given a coding problem:
+{{description|trim}}
+Given the coding problem, you have two tasks using natural language:
+1. reflect on the problem:
+   - For simple problems, briefly provide a concise explanation and note all possible valid inputs and edge cases. Avoid overthinking.
+   - For complex problems, provide a comprehensive analysis covering all aspects, details, nuances, and how to properly handle all possible valid inputs and edge cases per problem description.
+2. For {{actual_number_of_tests}} provided public test case(s) in description, briefly explain how the specified input yields the expected output based on the problem description.
+Your answer should be directly parsable as YAML. DO NOT output anything else.
+The output must be a YAML object like this:
+Example YAML output:
+```yaml
+self_reflection:
+- |
+  ...
+tests_explanations:
+- input: |
+    ...
+  output: |
+    ..
+  explanation: |
+    ...
+...
+```
+Answer:
+```yaml
+"""

@@ -1,0 +1,91 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "name": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "description": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "canonical_solution": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "test_setup_code": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "test_list": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "private_tests": {
+      "input": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "public_tests": {
+      "input": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    },
+    "generated_tests": {
+      "input": {
+        "feature": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "is_valid_test": {
+        "dtype": "null",
+        "_type": "Value"
+      },
+      "output": {
+        "feature": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

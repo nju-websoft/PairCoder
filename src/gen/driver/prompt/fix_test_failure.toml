@@ -1,0 +1,82 @@
+[prompt_driver_fix_test_failure]
+temperature = 0
+system = """
+You are an experienced programming expert.
+"""
+user = """
+{%- if error_type == 'logic' %}
+You are given a coding problem:
+{{ description_short|trim }}
+A Python code solution was generated for the problem:
+```
+{{ code_recent_solution|trim }}
+```
+However, when running the following input example, the code solution above failed to produce the expected output:
+```
+{{ error_str|trim }}
+```
+{%- endif %}
+
+{%- if error_type == 'runtime' %}
+Here is a Python code snippet:
+```
+{{ code_recent_solution|trim }}
+```
+However, errors occurred when execting this code:
+```
+{{ error_str|trim }}
+```
+{%- endif %}
+
+{%- if error_type == 'timeout' %}
+Here is a Python code snippet:
+```
+{{ code_recent_solution|trim }}
+```
+However, a timeout error occurred when running this code:
+```
+{{ error_str|trim }}
+```
+{%- endif %}
+Please fix the code using the following approach:
+```
+Error Analysis:
+{{what_went_wrong| trim}}
+Fix Process:
+{{fixed_flow| trim}}
+```
+{%- if io_format == 'normal' %}
+Guidelines:
+- The code must use only one input() function to obtain an organized string contains the parameters for the function. You can directly pass the parameters using `*eval(input())`.
+- You must use only one print() statement to output the return value from the function you completed, without any additional words.
+The code must follow the following structure within a markdown block:
+```python
+def func(...):
+    ...
+    return ...
+
+if __name__ == "__main__":
+    print(func(*eval(input())))
+```
+{%- endif %}
+{%- if io_format == 'contest' %}
+Guidelines:
+- The code should read the input using the 'input()' method and properly parse it according to the problem description.
+- The output should be printed without additional words using the 'print()' method.
+The code must follow the following structure within a markdown block:
+```python
+def f1(...):
+    ...
+    return ...
+
+def f2(...):
+    ...
+    return ...
+...
+if __name__ == "__main__":
+    ...
+```
+{%- endif %}
+Answer:
+```python
+"""
