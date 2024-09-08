@@ -1,0 +1,62 @@
+[openai]
+key = "YOUR_KEY"
+
+[config]
+model = "gpt-4"
+embedding_model = "text-embedding-3-large"
+frequency_penalty=0.1
+ai_timeout=90
+fallback_models =[]
+verbosity_level=2 # 0,1,2
+private_dataset_cache_dir="./"
+max_requests_per_minute=60
+
+
+[dataset]
+evaluate_prev_solutions=false
+num_iterations=1
+use_iteration_scheme=true
+
+[solve]
+max_coding_count = 10 
+reduce_verbose = false
+use_baseline = false
+use_direct_solutions=false
+
+[self_reflection]
+validate_self_reflection=false
+
+[possible_solutions]
+max_num_of_possible_solutions=3
+num_clusters=3
+use_test_explanations=true
+# remove_brute_force_solutions=false
+
+[initial_code_generation]
+max_attempts=5
+static_analysis=true
+
+[public_tests]
+max_plan_attempts=3
+decision_maker=true
+decision_method='Function'
+use_test_explanations=false
+pair_fix=true
+# use_self_reflection=true
+
+
+[code_tester]
+tester_type="local"
+order_matters=true
+sandbox=true
+delta=0.0001
+calc_trace=false
+use_trace=false
+max_trace_lines=50
+trace_depth=4
+
+[code_contests_tester]
+stop_on_first_failure = false
+timeout = 3
+path_to_python_bin = "/usr/bin/python3.9"
+path_to_python_lib = ["/usr/lib", "/usr/lib/python3.9"]

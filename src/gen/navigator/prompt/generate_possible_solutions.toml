@@ -1,0 +1,42 @@
+[prompt_navigator_generate_possible_solutions]
+temperature = 0.8
+n = 5
+system= """\
+You are an experienced programmer.
+"""
+user="""You are given a coding problem:
+{{description}}
+Self-reflection on the problem:
+{{ self_reflection|trim }}
+{%- if use_test_explanations_possible_solutions %}
+Here are also explanations for public test cases:
+{{ tests_explanations_str|trim }}
+{%- endif %}
+
+Provide up to {{max_num_of_possible_solutions}} possible solution plans to the problem.
+Each solution plan should:
+1.Have a descriptive name.
+2.Outline the solution approach:
+   - For simple problems (e.g., reversing a list), provide a concise solution (e.g., we can directly use list1[::-1] to do it.).
+   - For complex problems (e.g., finding the shortest path in a graph), provide a problem-solving plan with high-level steps (e.g., we can use BFS to solve it. First, Initialize a queue with... Second, ...).
+  If necessary, select an appropriate algorithm through problem analysis such as brute force, simulation, greedy, hash map, two pointers, DFS/BFS, stack/queue, DP, etc.
+3.Ensure functional correctness by addressing all possible valid inputs and edge cases per problem description.
+
+Your answer should be directly parsable as YAML. DO NOT output anything else.
+The output must be a YAML object like this:
+Example YAML output:
+```yaml
+possible_solutions:
+  - name: |
+      ...
+    content: |
+      ...
+  - name: |
+      ...
+    content: |
+      ...
+  ...
+```
+Answer:
+```yaml
+"""

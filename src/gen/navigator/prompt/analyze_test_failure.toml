@@ -1,0 +1,62 @@
+[prompt_navigator_analyze_test_failure]
+temperature = 0
+system = """
+You are an experienced and patient programming expert, skilled at analyzing code bugs and providing precise guidance for fixing them.
+"""
+user="""\
+{%- if error_type == 'logic' %}
+You are given a coding problem:
+{{ description_short|trim }}
+A Python code solution was generated for the problem:
+```
+{{ code_recent_solution|trim }}
+```
+However, the code solution failed to produce the expected output:
+```
+{{ error_str|trim }}
+```
+Identify and briefly explain the logical or functional errors in the code that prevent it from producing the expected output for the given input.
+Provide a step-by-step approach to fix the issues, ensuring the corrected code can handle all valid inputs correctly.
+Keep the fix steps concise for minor issues, but provide more detailed steps if major revisions are required.
+{%- endif %}
+
+{%- if error_type == 'runtime' %}
+Here is a Python code snippet:
+```
+{{ code_recent_solution|trim }}
+```
+However, errors occurred when execting this code:
+```
+{{ error_str|trim }}
+```
+Identify the specific part(s) of the code that causing runtime error and briefly explain what went wrong.
+Provide a step-by-step approach to fix the issues.
+Keep the fix steps concise for minor issues, but provide more detailed steps if major revisions are required.
+{%- endif %}
+
+{%- if error_type == 'timeout' %}
+Here is a Python code snippet:
+```
+{{ code_recent_solution|trim }}
+```
+However, the code failed to produce output within the time limit:
+```
+{{ error_str|trim }}
+```
+Brief explain the possible reasons, e.g., incorrect input/output handling or inefficient algorithm leading to timeouts.
+Provide a step-by-step approach to fix the issues.
+Keep the fix steps concise for minor issues, but provide more detailed steps if major revisions are required.
+{%- endif %}
+
+Your answer should be directly parsable as YAML. DO NOT output anything else.
+The output must be a YAML object like this:
+Example YAML output:
+```yaml
+what_went_wrong: |
+  ...
+fixed_flow: |
+  ...
+```
+Answer:
+```yaml
+"""

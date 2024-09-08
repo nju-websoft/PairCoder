@@ -1,0 +1,34 @@
+[prompt_navigator_choose_best_solution]
+temperature = 0
+system = """\
+You are an experienced programmer.
+"""
+user="""\
+You are given a coding problem:
+{{description|trim}}
+Self-reflection on the problem:
+{{ self_reflection|trim }}
+Here is a list of {{ solutions_details|selectattr('tried', 'equalto', false)|list|length }} possible solutions to the problem, each preceded by its corresponding INDEX NUMBER.
+=======
+{{ candidate_solutions_str|trim }}
+=======
+Choose the most robust and correct solution and provide a brief explanation for your choice.
+The selected solution should:
+1. Prioritize functional correctness over efficiency. If there is a simulation method or a direct brute force method available, prefer it.
+2. Fully solve the problem and correctly handle all possible valid inputs and edge cases as per the problem description.
+3. Consider more efficient methods only if they do not compromise correctness.
+
+Give the selected solutions their corresponding index numbers without altering them.
+The output must be a YAML object like this:
+Example YAML output:
+```yaml
+INDEX_NUMBER: |
+  ...
+name: |
+  ...
+why: |
+  ...
+```
+Answer:
+```yaml
+"""
