@@ -33,9 +33,10 @@ For the given `$split_name` of the `$dataset_name`, the logs and the final `solu
 If you find the code helpful, please cite our paper:
 ```
 @inproceedings{zhang2024paircoder,
-  title = { A Pair Programming Framework for Code Generation via Multi-Plan Exploration and Feedback-Driven Refinement },
-  author = { Zhang, Huan and Cheng, Wei and Wu, Yuhan and Hu, Wei },
+  title     = { A Pair Programming Framework for Code Generation via
+                Multi-Plan Exploration and Feedback-Driven Refinement },
+  author    = { Zhang, Huan and Cheng, Wei and Wu, Yuhan and Hu, Wei },
   booktitle = { ASE },
-  year = { 2024 }
+  year      = { 2024 }
 }
 ```
