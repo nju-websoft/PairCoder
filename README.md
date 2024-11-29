@@ -38,6 +38,8 @@ pip install -r requirements.txt
 Please set your API KEY in `settings/configuration.toml`.
 This file also contains numerous other configurable options that allow you to fine-tune and precisely control the behavior of PairCoder.
 
+Please download the dataset file from [releases]() and unzip it here.
+
 ## 🚀Quick Start
 
 Use the following command to perform code generation:
