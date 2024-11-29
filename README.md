@@ -10,6 +10,7 @@
 <p align="center">
   <a href="#overview">📖Overview</a> •
   <a href="#prepare-environment">🧪Environment</a> •
+  <a href="#dataset-setup">📂Dataset Setup</a> •
   <a href="#quick-start">🚀Quick Start</a> •
   <a href="#citation">📝Citation</a>
 </p>
@@ -38,7 +39,19 @@ pip install -r requirements.txt
 Please set your API KEY in `settings/configuration.toml`.
 This file also contains numerous other configurable options that allow you to fine-tune and precisely control the behavior of PairCoder.
 
-Please download the dataset file from [releases]() and unzip it here.
+## 📂Dataset Setup
+
+1. Download the dataset file from [releases](<https://github.com/nju-websoft/PairCoder/releases/tag/v0.1.0>).  
+2. Unzip the file and place the `dataset` directory in the project root:  
+
+   ```
+   PairCoder/
+   ├─assets
+   ├─dataset
+   ├─src
+   ```
+
+The dataset is required for running the experiments. Ensure that the directory structure matches the project requirements.
 
 ## 🚀Quick Start
 
